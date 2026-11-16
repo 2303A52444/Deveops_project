@@ -1,0 +1,167 @@
+/* 🌈 Full Page Blood Theme */
+body {
+     margin: 0;
+     font-family: Arial, sans-serif;
+     background: linear-gradient(to right, #ff4d4d, #b30000);
+     color: white;
+}
+
+/* 🔝 Header */
+header {
+     text-align: center;
+     padding: 15px;
+     background: #800000;
+}
+
+header h1,
+header h2 {
+     margin: 0;
+}
+
+/* 🔗 Navbar */
+nav {
+     margin-top: 10px;
+}
+
+nav a {
+     color: white;
+     margin: 10px;
+     text-decoration: none;
+     font-weight: bold;
+}
+
+nav a:hover {
+     text-decoration: underline;
+}
+
+/* 🏠 Hero Section */
+.hero {
+     text-align: center;
+     padding: 80px 20px;
+}
+
+/* 🔘 Buttons */
+.buttons a,
+button {
+     display: inline-block;
+     margin: 10px;
+     padding: 10px 20px;
+     background: white;
+     color: red;
+     text-decoration: none;
+     border-radius: 5px;
+     font-weight: bold;
+     border: none;
+     cursor: pointer;
+}
+
+.buttons a:hover,
+button:hover {
+     background: #ffe6e6;
+}
+
+/* 📦 Forms */
+form {
+     background: rgba(0, 0, 0, 0.3);
+     padding: 20px;
+     margin: 30px auto;
+     width: 300px;
+     border-radius: 10px;
+     text-align: center;
+}
+
+form input,
+form select,
+form textarea {
+     width: 90%;
+     padding: 8px;
+     margin: 10px 0;
+     border: none;
+     border-radius: 5px;
+}
+
+/* 🧍 Layout Section */
+.container {
+     display: flex;
+     justify-content: space-around;
+     align-items: center;
+     padding: 40px;
+}
+
+.left {
+     width: 40%;
+     font-size: 20px;
+}
+
+.right img {
+     width: 300px;
+     height: 180px;
+     border-radius: 10px;
+     object-fit: cover;
+     border: 3px solid white;
+}
+
+/* 📰 Blog Section */
+.blog {
+     text-align: center;
+     padding: 20px;
+}
+
+.card {
+     background: rgba(255, 255, 255, 0.1);
+     padding: 15px;
+     margin: 15px auto;
+     width: 80%;
+     border-radius: 10px;
+}
+
+.blog img {
+     width: 80%;
+     max-width: 300px;
+     height: 180px;
+     object-fit: cover;
+     border-radius: 10px;
+}
+
+/* 🎥 Video */
+.video-container {
+     margin-top: 20px;
+}
+
+.video-container iframe {
+     width: 80%;
+     height: 300px;
+     border-radius: 10px;
+}
+
+/* ✅ Success Page */
+.success-page {
+     text-align: center;
+     margin-top: 100px;
+}
+
+/* 🔚 Footer */
+footer {
+     text-align: center;
+     padding: 15px;
+     background: #800000;
+     margin-top: 30px;
+}
+
+
+/* 📱 Responsive */
+@media(max-width: 768px) {
+     .container {
+          flex-direction: column;
+          text-align: center;
+     }
+
+     .left,
+     .right {
+          width: 100%;
+     }
+
+     form {
+          width: 90%;
+     }
+}

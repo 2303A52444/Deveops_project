@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+     <title>Admin Dashboard</title>
+     <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+     <header>
+          <h1>🛠 Admin Dashboard</h1>
+     </header>
+
+     <section class="admin-container">
+
+          <h2>👤 Users</h2>
+          <div id="users"></div>
+
+          <h2>❤️ Donors</h2>
+          <div id="donors"></div>
+
+          <h2>🆘 Requests</h2>
+          <div id="requests"></div>
+
+          <h2>📰 Blogs</h2>
+          <div id="blogs"></div>
+
+          <h2>🔢 Counts</h2>
+          <div id="counts"></div>
+
+     </section>
+
+     <script>
+          fetch('/admin-data')
+               .then(res => res.json())
+               .then(data => {
+
+                    // USERS
+                    document.getElementById("users").innerHTML =
+                         data.users.map(u =>
+                              `<p>${u.name} (${u.email}) - ${u.blood}</p>`
+                         ).join("");
+
+                    // DONORS
+                    document.getElementById("donors").innerHTML =
+                         data.donors.map(d =>
+                              `<p>${d.name} - ${d.blood} (${d.location})</p>`
+                         ).join("");
+
+                    // REQUESTS
+                    document.getElementById("requests").innerHTML =
+                         data.requests.map(r =>
+                              `<p>${r.name} needs ${r.blood} in ${r.city}</p>`
+                         ).join("");
+
+                    // BLOGS
+                    document.getElementById("blogs").innerHTML =
+                         data.blogs.map(b =>
+                              `<p><b>${b.title}</b>: ${b.content}</p>`
+                         ).join("");
+
+                    // COUNTS
+                    document.getElementById("counts").innerHTML =
+                         `<p>Signup: ${data.count.signup}</p>
+         <p>Login: ${data.count.login}</p>`;
+               });
+     </script>
+
+</body>
+
+</html>

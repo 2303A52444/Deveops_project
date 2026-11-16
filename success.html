@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+     <meta charset="UTF-8">
+     <title>Success</title>
+     <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="success-body">
+
+     <div class="success-box">
+          <h1 id="title"></h1>
+          <p id="message"></p>
+          <a href="index.html" class="home-btn">Go Home</a>
+     </div>
+
+     <script>
+          const params = new URLSearchParams(window.location.search);
+          const type = params.get("type");
+
+          const title = document.getElementById("title");
+          const message = document.getElementById("message");
+
+          if (type === "donate") {
+               title.innerText = "❤️ Thank You for Donating Blood ❤️";
+               message.innerText = "Your contribution can save lives!";
+          }
+          else if (type === "request") {
+               title.innerText = "🩸 Request Submitted Successfully";
+               message.innerText = "We will connect you with donors soon.";
+          }
+          else if (type === "login") {
+               title.innerText = "✅ Login Successful";
+               message.innerText = "Welcome back!";
+          }
+          else if (type === "signup") {
+               title.innerText = "🎉 Signup Successful";
+               message.innerText = "Your account has been created.";
+          }
+          else if (type === "blog") {
+               title.innerText = "📰 Blog Posted Successfully";
+               message.innerText = "Your post has been added.";
+          }
+          else {
+               title.innerText = "✅ Success!";
+               message.innerText = "Operation completed successfully.";
+          }
+     </script>
+
+</body>
+
+</html>

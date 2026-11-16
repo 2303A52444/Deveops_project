@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+     <title>Signup</title>
+     <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+     <header>
+          <h2>Signup</h2>
+     </header>
+
+     <!-- ✅ FIXED HERE -->
+     <form action="/auth/signup" method="POST">
+
+          <input name="name" placeholder="Name" required>
+          <input name="email" placeholder="Email" required>
+          <input name="password" type="password" required>
+
+          <select name="blood" required>
+               <option value="">Select Blood</option>
+               <option>A+</option>
+               <option>B+</option>
+               <option>O+</option>
+               <option>AB+</option>
+          </select>
+
+          <input name="city" placeholder="City" required>
+
+          <button>Signup</button>
+     </form>
+
+</body>
+
+</html>
